@@ -5481,8 +5481,8 @@ var Events = function () {
    * Destroys all of the global audio bindings
    */
   function destroyAudioBindings() {
-    _config2.default.audio.removeEventListener("timeupdate", _timeUpdate2.default.handle);
     _config2.default.audio.removeEventListener("durationchange", _timeUpdate2.default.handle);
+    _config2.default.audio.removeEventListener("timeupdate", _timeUpdate2.default.handle);
     _config2.default.audio.removeEventListener("ended", _ended2.default.handle);
     _config2.default.audio.removeEventListener("progress", _progress2.default.handle);
 
@@ -9669,7 +9669,7 @@ var TimeUpdate = function () {
         Compute the current time
       */
       var currentTime = _time2.default.computeCurrentTimes();
-
+      console.log(currentTime);
       /*
         Compute the song completion percentage
       */

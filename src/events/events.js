@@ -184,8 +184,8 @@ var Events = (function() {
    * Destroys all of the global audio bindings
    */
   function destroyAudioBindings(){
-    config.audio.removeEventListener("timeupdate", TimeUpdate.handle);
     config.audio.removeEventListener("durationchange", TimeUpdate.handle);
+    config.audio.removeEventListener("timeupdate", TimeUpdate.handle);
     config.audio.removeEventListener("ended", Ended.handle);
     config.audio.removeEventListener("progress", Progress.handle);
     
